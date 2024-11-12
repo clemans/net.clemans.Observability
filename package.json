@@ -1,0 +1,44 @@
+{
+  "name": "clemans-net-observability",
+  "author": "Brooks C. Clemans <brooks@clemans.net>",
+  "version": "1.0.0",
+  "types": "dist/bin/index.d.ts",
+  "main": "dist/bin/index.js",
+  "bin": {
+    "net-clemans-observability": "dist/bin/index.js"
+  },
+  "scripts": {
+    "lint": "npx eslint .",
+    "build": "npm run lint && npm run compile && npm run synth && npm run diff",
+    "compile": "npx tsc",
+    "transpile": "npm run compile",
+    "synth": "npx cdk synth  | tee ./dist/Stack.yaml",
+    "deploy": "npx cdk deploy --all --ci true || exit 1",
+    "destroy": "npx cdk destroy --all --force || exit 1",
+    "diff": "npx cdk diff",
+    "start": "npm run deploy",
+    "test": "npx jest --coverage",
+    "watch": "npx tsc -w"
+  },
+  "devDependencies": {
+    "@aws-cdk/assertions": "^1.203.0",
+    "@eslint/js": "^9.14.0",
+    "@jest/types": "^29.6.3",
+    "@types/jest": "^29.5.14",
+    "@types/node": "22.7.9",
+    "aws-cdk": "2.166.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.14.0",
+    "globals": "^15.12.0",
+    "jest": "^29.7.0",
+    "markdownlint": "^0.36.1",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.13.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.166.0",
+    "constructs": "^10.4.2"
+  }
+}

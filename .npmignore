@@ -1,0 +1,45 @@
+# Ignore development and build files
+__tests__
+src/
+*.ts
+*.js
+*.map
+
+# Ignore CDK generated files
+cdk.out/
+
+# Ignore files related to IDEs or editors
+.idea/
+.vscode/
+
+# Ignore local configuration files
+.npmignore
+.gitignore
+
+# Ignore build and dependency files
+node_modules/
+dist/
+*.lock
+*.log
+
+# Ignore CDK context file
+cdk.context.json
+
+# Ignore CDK assets
+assets/
+
+# Ignore AWS CDK bootstrap files
+cdk.json
+manifest.json
+
+# Ignore environment-specific files
+*.dev.*
+*.prod.*
+
+# Ignore example or documentation files
+docs/
+examples/
+README.md
+
+# Ignore environment variable files
+.env
