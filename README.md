@@ -13,7 +13,7 @@
     </td>
   </tr>
 </table>
-  <h3 align="center">AWS Identity and Access Management (IAM)</h3>
+  <h3 align="center">AWS Alarms & Metrics (CloudWatch)</h3>
   <p align="center">
     AWS Alerts, Metrics, and Topics resources for the self-hosted domain: clemans.net.
     <br />
